@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "compile and run (input → output)",
+      "type": "shell",
+      "command": "g++ -std=c++17 \"${file}\" -o \"${fileBasenameNoExtension}.exe\" && .\\${fileBasenameNoExtension}.exe < input.txt > output.txt",
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "presentation": {
+        "reveal": "never",
+        "panel": "dedicated",
+        "close": true,
+        "focus": false,
+        "clear": true
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
+
+
+
+
+
+
