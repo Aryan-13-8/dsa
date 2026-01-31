@@ -58,19 +58,46 @@ int factorial(int n){
     if(n==0) return 1;
     return factorial(n-1)*n;
 }
+//reverse an array 
+ void f9(int i,vector<int>& arr,int n){
+    if(i>=n/2)
+    return;
+    swap(arr[i],arr[n-i-1]);
+    f9(i+1,arr,n);
+}
+//check palindrome
+bool f(int i, string&s){
+    if(i>=s.size()/2)
+    return true;
+    if(s[i]=!s[s.size()-i-1])
+    return false;
+    return f(i+1,s);
+}
 
 
 int main() {
-    int n;
+    //int n;
+    //int i=0;
     //int sum=0;
-    cin>>n;
+   // cin>>n;
     //functionname(n);
     //f(i,n) ;
     //funtion2(i,n);
-    //funtion4(i,n);
+    //funtion3(n,n);
    //funtion5(n,0);
    //cout << sum(n);
-   cout<< factorial(n);
+   //cout<< factorial(n);
+   //from here for array
+//    vector<int> arr(n);
+//    for(int i=0 ; i<n; i++){
+//     cin>>arr[i];
+//    }
+//    f(0 ,arr,n);
+//    for(int x : arr) cout << x << " ";
+string s="madvm";
+cout<<(f(0,s)? "true": "false");
+
+
 
     return 0;
 }
