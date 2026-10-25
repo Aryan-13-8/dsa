@@ -1,13 +1,18 @@
 class Solution {
 public:
-    int f(int n){
-        if(n<=1){
+    int fib(int n) {
+        int a=0;
+        int b=1;
+        if (n<=1){
             return n;
         }
-        return f(n-2)+f(n-1);
-    }
-    int fib(int n) {
-        return f(n);
         
+        for (int i=2; i<=n; i++ ){
+            int sum=a +b;
+            a=b;
+            b=sum;
+
+        }
+        return b;
     }
 };
